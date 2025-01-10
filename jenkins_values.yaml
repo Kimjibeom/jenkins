@@ -449,7 +449,10 @@ controller:
   #  - "new groovy.json.JsonSlurperClassic"
 
   # -- Map of groovy init scripts to be executed during Jenkins controller start
-  initScripts: {}
+  initScripts:
+    - |
+      System.setProperty('org.apache.commons.jelly.tags.fmt.timeZone', 'Asia/Seoul')
+      System.setProperty('user.timezone', 'Asia/Seoul')
   #  test: |-
   #    print 'adding global pipeline libraries, register properties, bootstrap jobs...'
   # -- Name of the existing ConfigMap that contains init scripts
