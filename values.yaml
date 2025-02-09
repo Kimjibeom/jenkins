@@ -171,7 +171,7 @@ controller:
   jenkinsUrlProtocol:
 
   # -- Set Jenkins URL if you are not using the ingress definitions provided by the chart
-  jenkinsUrl:
+  jenkinsUrl: https://jenkin.soosanint.com
 
   # If you set this prefix and use ingress controller, then you might want to set the ingress path below
   # I.e., "/jenkins"
@@ -407,6 +407,8 @@ controller:
     - workflow-aggregator:600.vb_57cdd26fdd7
     - git:5.7.0
     - configuration-as-code:1915.vcdd0a_d0d2625
+    - oic-auth:4.457.v8d7c72676cfe
+    - docker-workflow:592.v1001d948426c
 
   # If set to false, Jenkins will download the minimum required version of all dependencies.
   # -- Download the minimum required version or latest version of all dependencies
@@ -722,7 +724,7 @@ controller:
 
     # configures the hostname e.g. jenkins.example.com
     # -- Ingress hostname
-    hostName: jenkins.soosanint.com
+    hostName: jenkin.soosanint.com
     # -- Hostname to serve assets from
     resourceRootUrl:
     # -- Ingress TLS configuration
