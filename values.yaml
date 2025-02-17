@@ -591,7 +591,7 @@ controller:
         configuration:
           # -- Enables custom log config utilizing using the settings below.
           override: false
-          logLevel: INFO
+          logLevel: TRACE
           formatter: JSON
           logToConsole: true
           logToFile: false
@@ -677,7 +677,8 @@ controller:
   priorityClassName:
 
   # -- Annotations for controller pod
-  podAnnotations: {}
+  podAnnotations: 
+    proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
   # -- Annotations for controller StatefulSet
   statefulSetAnnotations: {}
 

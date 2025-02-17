@@ -168,10 +168,10 @@ controller:
   # or `http://` depending on the `tls` configuration.
   # The Protocol can be overwritten by specifying `controller.jenkinsUrlProtocol`.
   # -- Set protocol for Jenkins URL; `https` if `controller.ingress.tls`, `http` otherwise
-  jenkinsUrlProtocol:
+  jenkinsUrlProtocol: 
 
   # -- Set Jenkins URL if you are not using the ingress definitions provided by the chart
-  jenkinsUrl:
+  jenkinsUrl: 
 
   # If you set this prefix and use ingress controller, then you might want to set the ingress path below
   # I.e., "/jenkins"
@@ -402,11 +402,7 @@ controller:
 
   # Plugins will be installed during Jenkins controller start
   # -- List of Jenkins plugins to install. If you don't want to install plugins, set it to `false`
-  installPlugins:
-    - kubernetes:4306.vc91e951ea_eb_d
-    - workflow-aggregator:600.vb_57cdd26fdd7
-    - git:5.7.0
-    - configuration-as-code:1915.vcdd0a_d0d2625
+  installPlugins: false
 
   # If set to false, Jenkins will download the minimum required version of all dependencies.
   # -- Download the minimum required version or latest version of all dependencies
@@ -589,7 +585,7 @@ controller:
         configuration:
           # -- Enables custom log config utilizing using the settings below.
           override: false
-          logLevel: INFO
+          logLevel: TRACE  
           formatter: JSON
           logToConsole: true
           logToFile: false
@@ -675,7 +671,7 @@ controller:
   priorityClassName:
 
   # -- Annotations for controller pod
-  podAnnotations: {}
+  podAnnotations: 
   # -- Annotations for controller StatefulSet
   statefulSetAnnotations: {}
 
